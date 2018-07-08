@@ -1,0 +1,44 @@
+<?php
+// module/Album/view/album/album/index.phtml:
+
+$title = 'My reminders';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<p>
+    <a href="<?= $this->url('reminder', ['action' => 'add']) ?>">Add new reminder</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Username</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Bio</th>
+    <th>Password</th>
+    <th>Birthdate</th>
+    <th>Gender</th>
+    <th>Country</th>
+    <th>City</th>
+    
+    
+</tr>
+<?php foreach ($reminders as $reminder) : ?>
+    <tr>
+        <td><?= $this->escapeHtml($reminder->username) ?></td>
+        <td><?= $this->escapeHtml($reminder->firstname) ?></td>
+        <td><?= $this->escapeHtml($reminder->lastname) ?></td>
+        <td><?= $this->escapeHtml($reminder->bio) ?></td>
+        <td><?= $this->escapeHtml($reminder->password) ?></td>
+        <td><?= $this->escapeHtml($reminder->birthdate) ?></td>
+        <td><?= $this->escapeHtml($reminder->gender) ?></td>
+        <td><?= $this->escapeHtml($reminder->country) ?></td>
+        <td><?= $this->escapeHtml($reminder->city) ?></td>
+       
+        <td>
+            <a href="<?= $this->url('reminder', ['action' => 'edit', 'id' => $reminder->id]) ?>">Edit</a>
+            <a href="<?= $this->url('reminder', ['action' => 'delete', 'id' => $reminder->id]) ?>">Delete</a>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>

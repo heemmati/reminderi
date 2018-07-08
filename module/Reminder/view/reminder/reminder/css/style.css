@@ -1,0 +1,247 @@
+
+
+*{
+	margin:0px;
+	padding:0px;
+	}
+body{
+	
+	background-image:url(../img/bgg.jpg);
+	background-size:cover;
+	font-family: 'Quicksand', sans-serif;
+		}
+.container{
+	width:800px;
+	margin:0 auto;
+	position:relative;
+	}	
+.nav-logo{
+	width:25%;
+	}	
+.clear{
+	clear:both;
+	float:none;
+	}	
+.nav-section{
+	margin-top:5px;
+	float:left;
+	color:#F9F9F9;
+	}
+.nav-list{
+	width:50%;
+	text-align:right;
+	margin-right:5px;
+	
+	}	
+.nav-list ul li{
+	
+	
+	font-size:10px;
+	    padding: 4px 18px;
+	list-style:none;
+	float:left;
+	}	
+.nav-list ul li a{
+	text-decoration:none;
+	color:white;
+	}
+.home-body{
+	position:absolute;
+	top: 900%;
+    left: 3%;
+	
+	}		
+.about{
+	width:40%;
+	float:left;
+	margin-left:25px;
+	color:#FFFFFF;
+	}	
+.about h2{
+	
+	
+	font-size:20px;
+	}	
+.about p{
+	font-size:12px;}	
+.form-btn{
+	    text-align: left;
+		padding-top:5px;
+    background-color:#7E7C7C;
+    color: #464242;
+    width: 275px;
+    height: 365px;
+    float: right;
+    opacity: .4;
+    position: absolute;
+	border-radius:5px;
+    top: -71%;
+    left: 59%;
+    transform: rotate(-90deg);
+	
+	}
+.fb1{
+	float:left;
+	text-align:center;
+	width:47%;}		
+.search{
+     
+	 background-color:#7E7C7C;
+	 opacity:.4;
+	}	
+.brand{
+	font-size:18px;
+	text-align:center;
+	font-weight:500;}	
+input #search{
+	background-color:none;
+	opacity:.4;
+	
+	
+	}	
+.forms{
+	-webkit-box-shadow: -13px -11px 43px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: -13px -11px 43px -21px rgba(0,0,0,0.75);
+box-shadow: -13px -11px 43px -21px rgba(0,0,0,0.75);
+background-color: white;
+    padding: 55px 35px;
+    color: #464242;
+    width: 250px;
+	min-height:282px;
+       top: -80%;
+    left: 57%;
+    float: right;
+    position: absolute;
+	border-radius:5px;
+	}	
+.forms p{
+	font-size:10px;
+	}	
+.forms h2{
+	color:#2380FF;
+	font-size:16px;}	
+	#firstname , #lastname , #email , #password , #city{
+		border-radius:15px;
+		outline:none;
+		border:.5px solid #E4E4E4;
+		padding:5px;
+		margin:5px 0;font-family: 'Quicksand', sans-serif;
+		font-size:9px;
+		
+		}
+#city{
+	width:67%;
+	}		
+form span{
+	font-size:10px;
+	}		
+		#firstname{
+			margin-right:11px;
+			}
+#firstname , #lastname {
+	width:42%;
+	}	
+#email , #password{
+	width:95%;
+	
+	}	
+#email2 , #password2 {
+	border-radius:15px;
+		outline:none;
+		border:.5px solid #E4E4E4;
+		padding:5px;
+		margin:5px 0;font-family: 'Quicksand', sans-serif;
+		font-size:9px;
+		
+	font-size:16px;}	
+form a{
+	font-size:10px;
+	display:block;
+	margin-top:5px;}	
+	form select{
+		border-radius:15px;
+		outline:none;
+		border:.5px solid #E4E4E4;
+		padding:5px;
+		margin:5px 0;font-family: 'Quicksand', sans-serif;
+		font-size:9px;
+		}
+.home-btn{
+	margin-top:15px;
+	color:white;
+	font-size:8px;
+	padding:5px 25px;
+	background-color:#2380FF;
+	border-radius:100px;
+	outline:none;
+	border:none;
+	
+	
+	}	
+form{
+	
+	width:100%;}	
+#day , #month {
+	
+	width:28%;}	
+	#year{
+		width:40%;
+		}	
+	
+	@media only screen and (max-width:1000px) {
+	.container{
+	width:90%;
+	
+
+	}
+	body{
+		background-size:auto;
+		
+		}	
+	.home-body{
+		width:90%;
+		position:static;
+	
+	
+	}	
+    .about{
+	width:40%;float:left;margin:20% auto;
+	}	
+	.form-btn{
+		display:none;
+		}
+    .forms{
+		width:50%;
+	position:static;
+	margin:20px auto;
+	float:right;
+	}		
+	}	@media only screen and (max-width:600px) {
+	.container{
+	width:90%;
+	
+
+	}
+	body{
+		background-size:auto;
+		
+		}	
+	.home-body{
+		width:90%;
+		position:static;
+	
+	
+	}	
+    .about{
+	width:80%;float:none;margin:20px auto;
+	}	
+	.form-btn{
+		display:none;
+		}
+    .forms{
+		width:80%;
+	position:static;
+	margin:20px auto;
+	float:none;
+	}		
+	}	

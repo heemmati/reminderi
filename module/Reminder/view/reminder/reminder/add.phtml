@@ -1,0 +1,123 @@
+<?php
+$title = 'Add new User';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<?php
+// This provides a default CSS class and placeholder text for the email element:
+$email = $form->get('email');
+$email->setAttribute('class', 'form-control');
+$email->setAttribute('placeholder', 'Email');
+
+// This provides a default CSS class and placeholder text for the username element:
+$username = $form->get('username');
+$username->setAttribute('class', 'form-control');
+$username->setAttribute('placeholder', 'Username');
+
+
+// This provides a default CSS class and placeholder text for the firstname element:
+$firstname = $form->get('firstname');
+$firstname->setAttribute('class', 'form-control');
+$firstname->setAttribute('placeholder', 'Firstname');
+
+
+// This provides a default CSS class and placeholder text for the lastname element:
+$lastname = $form->get('lastname');
+$lastname->setAttribute('class', 'form-control');
+$lastname->setAttribute('placeholder', 'Lastname');
+
+
+// This provides a default CSS class and placeholder text for the password element:
+$password = $form->get('password');
+$password->setAttribute('class', 'form-control');
+$password->setAttribute('placeholder', 'Password');
+
+
+// This provides a default CSS class and placeholder text for the bio element:
+$bio = $form->get('bio');
+$bio->setAttribute('class', 'form-control');
+$bio->setAttribute('placeholder', 'bio');
+
+
+// This provides a default CSS class and placeholder text for the gender element:
+$gennder = $form->get('gennder');
+$gennder->setAttribute('class', 'form-control');
+$gennder->setAttribute('placeholder', 'Gender');
+
+
+// This provides a default CSS class and placeholder text for the country element:
+$country = $form->get('country');
+$country->setAttribute('class', 'form-control');
+$country->setAttribute('placeholder', 'Country');
+
+
+
+// This provides a default CSS class and placeholder text for the city element:
+$city = $form->get('city');
+$city->setAttribute('class', 'form-control');
+$city->setAttribute('placeholder', 'City');
+
+
+
+// This provides CSS classes for the submit button:
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary');
+
+$form->setAttribute('action', $this->url('reminder', ['action' => 'add']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+<?php // Wrap the elements in divs marked as form groups, and render the
+      // label, element, and errors separately within ?>
+<div class="form-group">
+    <?= $this->formLabel($email) ?>
+    <?= $this->formElement($email) ?>
+    <?= $this->formElementErrors()->render($email, ['class' => 'help-block']) ?>
+</div>
+
+<div class="form-group">
+    <?= $this->formLabel($username) ?>
+    <?= $this->formElement($username) ?>
+    <?= $this->formElementErrors()->render($username, ['class' => 'help-block']) ?>
+</div>
+
+<div class="form-group">
+    <?= $this->formLabel($firstname) ?>
+    <?= $this->formElement($firstname) ?>
+    <?= $this->formElementErrors()->render($firstname, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($lastname) ?>
+    <?= $this->formElement($lastname) ?>
+    <?= $this->formElementErrors()->render($lastname, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($password) ?>
+    <?= $this->formElement($password) ?>
+    <?= $this->formElementErrors()->render($password, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($bio) ?>
+    <?= $this->formElement($bio) ?>
+    <?= $this->formElementErrors()->render($bio, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($gennder) ?>
+    <?= $this->formElement($gennder) ?>
+    <?= $this->formElementErrors()->render($gennder, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($country) ?>
+    <?= $this->formElement($country) ?>
+    <?= $this->formElementErrors()->render($country, ['class' => 'help-block']) ?>
+</div>
+<div class="form-group">
+    <?= $this->formLabel($city) ?>
+    <?= $this->formElement($city) ?>
+    <?= $this->formElementErrors()->render($city, ['class' => 'help-block']) ?>
+</div>
+<?php
+echo $this->formSubmit($submit);
+echo $this->formHidden($form->get('id'));
+echo $this->form()->closeTag();
